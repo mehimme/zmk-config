@@ -155,6 +155,17 @@
             ignored-key-positions = <20>;
             label = "INVALTGRAVE";
         };
+
+        skl: skl {
+            compatible = "zmk,behavior-sticky-key";
+            label = "SKL";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <500>;
+            quick-release;
+            ignore-modifiers;
+            lazy;
+        };
     };
 
     keymap {
@@ -222,11 +233,11 @@
         mouse_lyr {
             display-name = "mouse";
             bindings = <
-&trans  &trans          &trans             &trans             &trans            &trans                                   &trans          &trans             &trans             &trans            &trans           &trans
-&trans  &msc SCRL_LEFT  &msc SCRL_UP       &mmv MOVE_Y(-1000)  &msc SCRL_DOWN    &msc SCRL_RIGHT                          &msc SCRL_LEFT  &msc SCRL_DOWN     &mmv MOVE_Y(-1000)  &msc SCRL_UP      &msc SCRL_RIGHT  &trans
+&trans  &trans          &trans              &trans              &trans             &trans                                   &trans          &trans              &trans              &trans             &trans           &trans
+&trans  &msc SCRL_LEFT  &msc SCRL_UP        &mmv MOVE_Y(-1000)  &msc SCRL_DOWN     &msc SCRL_RIGHT                          &msc SCRL_LEFT  &msc SCRL_DOWN      &mmv MOVE_Y(-1000)  &msc SCRL_UP       &msc SCRL_RIGHT  &trans
 &trans  &mkp RCLK       &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)  &trans                                   &trans          &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)  &mkp RCLK        &trans
-&trans  &mkp LCLK       &trans             &trans             &mkp MCLK         &trans           &trans       &trans     &trans          &mkp MCLK          &trans             &trans            &mkp LCLK        &trans
-                                           &trans             &trans            &trans           &mkp LCLK    &mkp LCLK  &trans          &trans             &trans
+&trans  &mkp LCLK       &trans              &trans              &mkp MCLK          &trans           &trans       &trans     &trans          &mkp MCLK           &trans              &trans             &mkp LCLK        &trans
+                                            &trans              &trans             &trans           &mkp LCLK    &mkp LCLK  &trans          &trans              &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -243,7 +254,7 @@
             display-name = "sym";
             bindings = <
 &kp F1       &kp F2           &kp F3       &kp F4     &kp F5      &kp F6                         &kp F7          &kp F8         &kp F9            &kp F10               &kp F11                &kp F12
-&altGrave    &altTab          &trans       &kp TILDE  &trans      &trans                         &kp EQUAL       &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp COLON              &kp PIPE
+&skl LGUI    &altTab          &trans       &kp TILDE  &trans      &trans                         &kp EQUAL       &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp COLON              &kp PIPE
 &kp GRAVE    &kp EXCLAMATION  &kp AT_SIGN  &kp HASH   &kp DOLLAR  &kp PERCENT                    &kp CARET       &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES
 &kp LS(TAB)  &kp LA(Z)        &kp LA(X)    &kp LA(C)  &trans      &trans       &trans    &trans  &kp UNDERSCORE  &kp MINUS      &kp LESS_THAN     &kp GREATER_THAN      &kp QUESTION           &trans
                                            &trans     &trans      &trans       &trans    &trans  &trans          &trans         &trans
@@ -256,7 +267,7 @@
             display-name = "isym";
             bindings = <
 &kp F12            &kp F11                &kp F10               &kp F9         &kp F8         &kp F7                            &kp F6       &kp F5      &kp F4     &kp F3       &kp F2           &kp F1
-&kp PIPE           &kp COLON              &kp RBKT              &kp LBKT       &kp PLUS       &kp EQUAL                         &trans       &trans      &kp TILDE  &trans       &invAltTab       &invAltGrave
+&kp PIPE           &kp COLON              &kp RBKT              &kp LBKT       &kp PLUS       &kp EQUAL                         &trans       &trans      &kp TILDE  &trans       &invAltTab       &skl LGUI
 &kp DOUBLE_QUOTES  &kp RIGHT_PARENTHESIS  &kp LEFT_PARENTHESIS  &kp ASTERISK   &kp AMPERSAND  &kp CARET                         &kp PERCENT  &kp DOLLAR  &kp POUND  &kp AT_SIGN  &kp EXCLAMATION  &kp GRAVE
 &trans             &kp QUESTION           &kp GREATER_THAN      &kp LESS_THAN  &kp MINUS      &kp UNDERSCORE  &trans    &trans  &trans       &trans      &kp LA(C)  &kp LA(X)    &kp LA(Z)        &kp LS(TAB)
                                                                 &trans         &trans         &trans          &trans    &trans  &trans       &trans      &trans
