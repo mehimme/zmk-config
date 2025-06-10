@@ -222,11 +222,11 @@
         mouse_lyr {
             display-name = "mouse";
             bindings = <
-&trans  &trans          &trans          &trans          &trans           &trans                                   &trans          &trans          &trans          &trans           &trans           &trans
-&trans  &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_Y(-1200)    &msc SCRL_DOWN   &msc SCRL_RIGHT                          &msc SCRL_LEFT  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &msc SCRL_RIGHT  &trans
-&trans  &mkp RCLK       &mmv MOVE_LEFT  &mmv MOVE_Y(1200)  &mmv MOVE_X(1200)  &trans                                   &trans          &mmv MOVE_X(-1200)  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &trans
-&trans  &mkp LCLK       &trans          &trans          &mkp MCLK        &trans           &trans       &trans     &trans          &mkp MCLK       &trans          &trans           &mkp LCLK        &trans
-                                        &trans          &trans           &trans           &mkp LCLK    &mkp LCLK  &trans          &trans          &trans
+&trans  &trans          &trans             &trans             &trans            &trans                                   &trans          &trans             &trans             &trans            &trans           &trans
+&trans  &msc SCRL_LEFT  &msc SCRL_UP       &mmv MOVE_Y(-1200)  &msc SCRL_DOWN    &msc SCRL_RIGHT                          &msc SCRL_LEFT  &msc SCRL_DOWN     &mmv MOVE_Y(-1200)  &msc SCRL_UP      &msc SCRL_RIGHT  &trans
+&trans  &mkp RCLK       &mmv MOVE_X(-1200)  &mmv MOVE_Y(1200)   &mmv MOVE_X(600)  &trans                                   &trans          &mmv MOVE_X(-1200)  &mmv MOVE_Y(1200)   &mmv MOVE_X(1200)  &mkp RCLK        &trans
+&trans  &mkp LCLK       &trans             &trans             &mkp MCLK         &trans           &trans       &trans     &trans          &mkp MCLK          &trans             &trans            &mkp LCLK        &trans
+                                           &trans             &trans            &trans           &mkp LCLK    &mkp LCLK  &trans          &trans             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
