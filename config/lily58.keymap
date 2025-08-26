@@ -253,11 +253,11 @@
 
             display-name = "sym";
             bindings = <
-&altGrave  &kp LG(N1)       &kp LG(N2)   &kp LG(N3)  &kp LG(N4)  &kp LG(N5)                     &kp LG(N6)      &kp LG(N7)     &kp LG(N8)        &kp LG(N9)            &kp LG(N0)             &trans
-&skl LGUI  &altTab          &trans       &kp TILDE   &trans      &trans                         &kp EQUAL       &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp COLON              &kp PIPE
-&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH    &kp DOLLAR  &kp PERCENT                    &kp CARET       &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES
-&trans     &kp LA(Z)        &kp LA(X)    &kp LA(C)   &trans      &trans       &trans    &trans  &kp UNDERSCORE  &kp MINUS      &kp LESS_THAN     &kp GREATER_THAN      &kp QUESTION           &trans
-                                         &trans      &trans      &trans       &trans    &trans  &trans          &trans         &trans
+&altGrave  &kp LG(N1)       &kp LG(N2)         &kp LG(N3)  &kp LG(N4)  &kp LG(N5)                     &kp LG(N6)      &kp LG(N7)     &kp LG(N8)        &kp LG(N9)            &kp LG(N0)             &trans
+&skl LGUI  &altTab          &kp RIGHT_BRACKET  &kp TILDE   &kp PLUS    &trans                         &kp EQUAL       &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp COLON              &kp PIPE
+&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN        &kp HASH    &kp DOLLAR  &kp PERCENT                    &kp CARET       &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES
+&trans     &kp LA(Z)        &kp LA(X)          &kp LA(C)   &trans      &trans       &trans    &trans  &kp UNDERSCORE  &kp MINUS      &kp LESS_THAN     &kp GREATER_THAN      &kp QUESTION           &trans
+                                               &trans      &trans      &trans       &trans    &trans  &trans          &trans         &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
