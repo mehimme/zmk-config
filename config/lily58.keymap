@@ -223,7 +223,7 @@
 &kp F1           &kp F2      &kp F3       &kp F4    &kp F5         &kp F6                    &kp F7  &kp F8         &kp F9    &kp F10    &kp F11     &kp F12
 &kp C_VOLUME_UP  &kp C_PP    &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &trans                    &trans  &kp PAGE_DOWN  &kp UP    &kp PG_UP  &kp C_PP    &kp C_VOL_UP
 &kp C_VOL_DN     &kp C_MUTE  &kp LEFT     &kp DOWN  &kp RIGHT      &trans                    &trans  &kp LEFT       &kp DOWN  &kp RIGHT  &kp C_MUTE  &kp C_VOL_DN
-&trans           &to 7       &to 1        &to 4     &to 2          &trans  &trans    &trans  &trans  &to 2          &to 4     &to 1      &to 7       &trans
+&trans           &to 7       &to 1        &to 8     &to 2          &trans  &trans    &trans  &trans  &to 2          &to 4     &to 1      &to 7       &trans
                                           &trans    &trans         &trans  &trans    &trans  &trans  &trans         &trans
             >;
 
@@ -284,6 +284,19 @@
 &trans      &trans        &trans        &trans        &trans        &trans                          &trans          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS      &kp KP_MINUS
 &trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans          &kp KP_NUMBER_0  &kp KP_DOT       &kp CARET        &kp KP_EQUAL     &trans
                                         &trans        &trans        &trans        &trans    &trans  &trans          &trans           &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        cad_lyr {
+            display-name = "keypad";
+            bindings = <
+&trans          &trans  &trans  &trans        &trans  &trans                    &kp KP_NUMLOCK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans           &trans
+&trans          &trans  &trans  &trans        &trans  &trans                    &trans          &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY  &kp KP_DIVIDE
+&kp LEFT_SHIFT  &trans  &trans  &trans        &trans  &trans                    &trans          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS      &kp KP_MINUS
+&kp LCTRL       &trans  &trans  &trans        &trans  &trans  &trans    &trans  &trans          &kp KP_NUMBER_0  &kp KP_DOT       &kp CARET        &kp KP_EQUAL     &trans
+                                &kp LEFT_ALT  &trans  &trans  &trans    &trans  &trans          &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
